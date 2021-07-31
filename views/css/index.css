@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    background: white;
+}
+
+header{
+    position: relative;
+    width:100%;
+    height:450px;
+    background: url('./imgs/iskolar_main_bg.jpg');
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.header-color-fade-div #h-c-f-d-1{
+    width:100%;
+    height:20px;
+    background: #e0b938;
+}
+
+.header-color-fade-div #h-c-f-d-2{
+    width:100%;
+    height:20px;
+    background: #e3c14f;
+}
+
+.header-color-fade-div #h-c-f-d-3{
+    width:100%;
+    height:20px;
+    background: #e7c865;
+}
+
+.header-color-fade-div #h-c-f-d-4{
+    width:100%;
+    height:20px;
+    background: #ead07b;
+}
+
+.search-section{
+    position: relative;
+    display:inline-block;
+    width:33%;
+    height:260px;
+}
+
+.sort-section{
+    position: relative;
+    display:inline-block;
+    width:33%;
+    height:255px;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+}
+
+.filter-section{
+    position: relative;
+    display:inline-block;
+    width:33%;
+    height:260px;
+}
+
+.search-section #search-btn{
+    position: absolute;
+    top:40%;
+    left:30%;
+    width:35%;
+    height:20%;
+    font-size: 1.3vw;
+}
+
+.sort-section #sort-btn{
+    position: absolute;
+    top:40%;
+    left:30%;
+    width:35%;
+    height:20%;
+    font-size: 1.3vw;
+}
+
+.filter-section #filter-btn{
+    position: absolute;
+    top:40%;
+    left:30%;
+    width:35%;
+    height:20%;
+    font-size: 1.3vw;
+}
