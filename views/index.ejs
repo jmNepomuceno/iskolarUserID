@@ -12,6 +12,8 @@
 <body>
     <header></header>
 
+    <!-- <div class="sub-header"></div> -->
+
     <div class="header-color-fade-div">
         <div id="h-c-f-d-1"></div>
         <div id="h-c-f-d-2"></div>
@@ -19,17 +21,31 @@
         <div id="h-c-f-d-4"></div>
     </div>
 
-    <section class="search-section">
+    <div class="search-div">
         <button type="button" class="btn btn-secondary" id="search-btn">Search for Name</button>
-    </section>
+    </div>
 
-    <section class="sort-section">
+    <div class="sort-div">
         <button type="button" class="btn btn-secondary" id="sort-btn">Sort Lists</button>
-    </section>
+    </div>
 
-    <section class="filter-section">
+    <div class="filter-div">
         <button type="button" class="btn btn-secondary" id="filter-btn">Filter Lists</button>
+    </div>
+
+    <section class="search-section">
+
+            <div class="search-side-section">
+                <form class="search-form">
+                    <input type="text" name="first_name" id="first-name-input" placeholder="First Name" required>
+                    <input type="text" name="last_name" id="last-name-input" placeholder="Last Name" required>
+                    <input type="text" name="middle_name" id="middle-name-input" placeholder="Middle Name" required>
+                    <input type="number" name="user_id" id="user-id-input" required placeholder="User ID" >
+                    <button type="submit" class="btn btn-success" id="search-btn">Success</button>
+                </form>
+            </div>
     </section>
 
+    <script type="text/javascript" src="/js/script.js" ></script>
 </body>
 </html>

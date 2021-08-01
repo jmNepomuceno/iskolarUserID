@@ -9,12 +9,34 @@ body{
 }
 
 header{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left:0;
     width:100%;
     height:450px;
     background: url('./imgs/iskolar_main_bg.jpg');
     background-size: 100% 100%;
     background-position: center center;
+    transition: 1s; 
+}
+
+.sub-header{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:80px;
+    transition: 1s; 
+    border:1px solid black;
+}
+
+.header-color-fade-div{
+    position: absolute;
+    top: 56.5%;
+    left:0;
+    width:100%;
+    height:80px;
+    transition: 1s; 
 }
 
 .header-color-fade-div #h-c-f-d-1{
@@ -41,30 +63,102 @@ header{
     background: #ead07b;
 }
 
-.search-section{
-    position: relative;
-    display:inline-block;
+.search-div{
+    position: absolute;
+    top:530px;
+    left:0;
     width:33%;
     height:260px;
+    transition:1s;
 }
 
-.sort-section{
-    position: relative;
-    display:inline-block;
+.search-div #search-btn{
+    position: absolute;
+    top:40%;
+    left:30%;
+    width:35%;
+    height:20%;
+    font-size: 1.3vw;
+}
+
+.search-section{
+    position: absolute;
+    top:0;
+    /* left:-100%; */
+    width:100%;
+    height:100%;
+    transition: 1s;
+}
+
+.search-section .search-side-section{
+    position: absolute;
+    top:8%;
+    left:0;
+    width:20%;
+    height:100%;
+    background: dimgray;
+}
+
+.search-section .search-side-section .search-form #first-name-input{
+    top:10%;
+}
+
+.search-section .search-side-section .search-form #middle-name-input{
+    top:20%;
+}
+
+.search-section .search-side-section .search-form #last-name-input{
+    top:30%;
+}
+
+.search-section .search-side-section .search-form #user-id-input{
+    top:40%;
+}
+
+.search-section .search-side-section .search-form #first-name-input,
+.search-section .search-side-section .search-form #last-name-input,
+.search-section .search-side-section .search-form #middle-name-input,
+.search-section .search-side-section .search-form #user-id-input{
+    position: absolute;
+    left:9%;
+    width:80%;
+    height:5%;
+    outline:none;
+    text-align: center;
+    border-radius: 5px;
+    border:0;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+}
+
+.search-section .search-side-section .search-form #search-btn{
+    position: absolute;
+    top:50%;
+    left:9%;
+    width:80%;
+    height:5%;
+}
+
+.sort-div{
+    position: absolute;
+    top:530px;
+    left:33.3%;
     width:33%;
     height:255px;
     border-left: 1px solid #d9d9d9;
     border-right: 1px solid #d9d9d9;
 }
 
-.filter-section{
-    position: relative;
-    display:inline-block;
+.filter-div{
+    position: absolute;
+    top:530px;
+    left:66.3%;
     width:33%;
     height:260px;
 }
 
-.search-section #search-btn{
+.sort-div #sort-btn{
     position: absolute;
     top:40%;
     left:30%;
@@ -73,16 +167,7 @@ header{
     font-size: 1.3vw;
 }
 
-.sort-section #sort-btn{
-    position: absolute;
-    top:40%;
-    left:30%;
-    width:35%;
-    height:20%;
-    font-size: 1.3vw;
-}
-
-.filter-section #filter-btn{
+.filter-div #filter-btn{
     position: absolute;
     top:40%;
     left:30%;
