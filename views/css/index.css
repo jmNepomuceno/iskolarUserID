@@ -20,16 +20,6 @@ header{
     transition: 1s; 
 }
 
-.sub-header{
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height:80px;
-    transition: 1s; 
-    border:1px solid black;
-}
-
 .header-color-fade-div{
     position: absolute;
     top: 56.5%;
@@ -81,10 +71,20 @@ header{
     font-size: 1.3vw;
 }
 
+.sub-header{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:80px;
+    transition: 1s; 
+    border:1px solid black;
+}
+
 .search-section{
     position: absolute;
-    top:0;
-    /* left:-100%; */
+    top:10%;
+    left:-100%;
     width:100%;
     height:100%;
     transition: 1s;
@@ -92,27 +92,28 @@ header{
 
 .search-section .search-side-section{
     position: absolute;
-    top:8%;
-    left:0;
+    top:15%;
+    left:3%;
     width:20%;
-    height:100%;
-    background: dimgray;
+    height:50%;
+    border: 2px solid #b5c5fc;
+    border-radius: 5%;
 }
 
 .search-section .search-side-section .search-form #first-name-input{
-    top:10%;
+    top:15%;
 }
 
 .search-section .search-side-section .search-form #middle-name-input{
-    top:20%;
-}
-
-.search-section .search-side-section .search-form #last-name-input{
     top:30%;
 }
 
+.search-section .search-side-section .search-form #last-name-input{
+    top:45%;
+}
+
 .search-section .search-side-section .search-form #user-id-input{
-    top:40%;
+    top:60%;
 }
 
 .search-section .search-side-section .search-form #first-name-input,
@@ -122,11 +123,14 @@ header{
     position: absolute;
     left:9%;
     width:80%;
-    height:5%;
+    height:10%;
     outline:none;
     text-align: center;
-    border-radius: 5px;
-    border:0;
+    background: #ced9fd;
+    border:1px solid #3b67f7;
+    border-top:none;
+    border-left:none;
+    border-right:none;
     text-transform: uppercase;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 1px;
@@ -134,10 +138,49 @@ header{
 
 .search-section .search-side-section .search-form #search-btn{
     position: absolute;
-    top:50%;
+    top:75%;
     left:9%;
     width:80%;
-    height:5%;
+    height:10%;
+}
+
+.search-section .search-body-section{
+    position: absolute;
+    top:5%;
+    right:3%;
+    width:70%;
+    height:80%;
+    border: 2px solid #b5c5fc;
+    border-radius: 20px;
+}
+
+.search-section .search-body-section .last-name-column{
+    left:1%;
+}
+
+.search-section .search-body-section .first-name-column{
+    left:26%;
+}
+
+.search-section .search-body-section .middle-name-column{
+    left:51%;
+}
+
+.search-section .search-body-section .user-id-column{
+    left:76%;
+}
+
+
+.search-section .search-body-section .last-name-column,
+.search-section .search-body-section .first-name-column,
+.search-section .search-body-section .middle-name-column,
+.search-section .search-body-section .user-id-column{
+    position: absolute;
+    top:0;
+    width:23%;
+    height:100%;
+    border:1px solid black;
+    display: inline-block;
 }
 
 .sort-div{
