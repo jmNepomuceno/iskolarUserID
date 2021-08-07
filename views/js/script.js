@@ -10,7 +10,7 @@ const filter_div = document.querySelector('.filter-div')
 
 search_btn.addEventListener('click',()=>{
     header.style.top = '-60%'
-    header_fade.style.top = '-10%'
+    header_fade.style.top = '-12%'
 
     search_div.style.display = 'none'
     sort_div.style.display = 'none'
