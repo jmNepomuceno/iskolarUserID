@@ -8,5 +8,10 @@ app.get('/' , (req, res) =>{
     res.render('index')
 })
 
+app.get('/search' , (req, res) =>{
+    console.log(req.query)
+    res.render('search')
+})
+
 let port = process.env.PORT || 3000
 app.listen(port, ()=> console.log(`Listening to port ${port}`))
