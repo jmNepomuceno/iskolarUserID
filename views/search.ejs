@@ -14,7 +14,11 @@
     <section class="search-section">
         <div action="/search" method="GET" class="search-side-section">
             <form class="search-form">
-                <input type="text" name="first_name" id="first-name-input" placeholder="First Name" required>
+
+                <input type="text" name="first_name" id="first-name-input" placeholder="First Name" 
+                    value="<%= search_information.last_name %>"
+                    required
+                >
                 <input type="text" name="middle_name" id="middle-name-input" placeholder="Middle Name" required>
                 <input type="text" name="last_name" id="last-name-input" placeholder="Last Name" required>
                 <input type="number" name="user_id" id="user-id-input" required placeholder="User ID" >
@@ -26,6 +30,7 @@
 
             <div class="last-name-column">
                 <label id="title-col">Last Name</label>
+                <label> <%= search_data.last_name %> </label>
             </div>
 
             <div class="first-name-column">

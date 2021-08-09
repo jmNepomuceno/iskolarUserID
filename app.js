@@ -9,8 +9,15 @@ app.get('/' , (req, res) =>{
 })
 
 app.get('/search' , (req, res) =>{
-    console.log(req.query)
-    res.render('search')
+    res.render('search', {
+        search_data: req.query,
+        search_information : {
+            last_name : req.query.last_name,
+            first_name : req.query.first_name,
+            middle_name : req.query.middle_name,
+            user_id : req.query.user_id
+        }
+    })
 })
 
 let port = process.env.PORT || 3000
