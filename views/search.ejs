@@ -16,37 +16,74 @@
             <form class="search-form">
 
                 <input type="text" name="first_name" id="first-name-input" placeholder="First Name" 
+                    value="<%= search_information.first_name %>"
+                    required
+                >
+                <input type="text" name="middle_name" id="middle-name-input" placeholder="Middle Name"
+                    value="<%= search_information.middle_name %>"
+                    required
+                >
+                <input type="text" name="last_name" id="last-name-input" placeholder="Last Name" 
                     value="<%= search_information.last_name %>"
                     required
                 >
-                <input type="text" name="middle_name" id="middle-name-input" placeholder="Middle Name" required>
-                <input type="text" name="last_name" id="last-name-input" placeholder="Last Name" required>
-                <input type="number" name="user_id" id="user-id-input" required placeholder="User ID" >
+                <input type="number" name="user_id" id="user-id-input" placeholder="User ID" 
+                    value="<%= search_information.user_id%>"
+                    required
+                >
                 <button type="submit" class="btn btn-success" id="search-btn">Success</button>
             </form>
         </div>
 
         <section class="search-body-section">
+            <div class="sub-section">
 
-            <div class="last-name-column">
-                <label id="title-col">Last Name</label>
-                <label> <%= search_data.last_name %> </label>
+                <div class="last-name-column">
+                    <label id="title-col">Last Name</label>
+
+                    <!-- De , Dela , Delos, San -->
+                    <% for(let i = 0; i < student_lists.length; i++){ %>
+                        <label class="last-name-rows"> 
+                            <% var two_surnames = ["DE", "DEL" , "DELA" , "DELOS", "SAN"]; %>
+                            <% if(two_surnames.includes(student_lists[i].last_name)) {%>
+                                <%= student_lists[i].last_name %> <%= student_lists[i].first_name%>
+                            <%}else{ %>
+                                <%= student_lists[i].last_name %>
+                            <% } %>
+                        </label>
+                    <% } %>
+
+                </div>
+
+                <div class="first-name-column">
+                    <label id="title-col">First Name</label>
+
+                    <% for(let i = 0; i < student_lists.length; i++){ %>
+                        <label class="first-name-rows"></label>
+                    <% } %>
+
+                </div>
+
+                <div class="middle-name-column">
+                    <label id="title-col">Middle Name</label>
+
+                    <% for(let i = 0; i < student_lists.length; i++){ %>
+                        <label class="middle-name-rows"></label>
+                    <% } %>
+
+                </div>
+
+                <div class="user-id-column">
+                    <label id="title-col">User ID</label>
+
+                    <% for(let i = 0; i < student_lists.length; i++){ %>
+                        <label class="user-id-rows"> <%= student_lists[i].id %></label>
+                    <% } %>
+                </div>
             </div>
-
-            <div class="first-name-column">
-                <label id="title-col">First Name</label>
-            </div>
-
-            <div class="middle-name-column">
-                <label id="title-col">Middle Name</label>
-            </div>
-
-            <div class="user-id-column">
-                <label id="title-col">User ID</label>
-            </div>
-
         </section>
     </section>
 
+    <script type="text/javascript" src="/js/search.js" ></script>
 </body>
 </html>

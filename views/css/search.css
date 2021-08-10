@@ -77,44 +77,63 @@
     width:70%;
     height:80%;
     border: 2px solid #b5c5fc;
+    overflow: auto;
 }
 
-.search-section .search-body-section .last-name-column{
+.search-section .search-body-section .sub-section{
+    margin-top:5%;
+    width:100%;
+    height:auto;
+}
+
+.search-section .search-body-section .sub-section .last-name-column{
     left:0;
 }
 
-.search-section .search-body-section .first-name-column{
+.search-section .search-body-section .sub-section .first-name-column{
     left:25.35%;
 }
 
-.search-section .search-body-section .middle-name-column{
+.search-section .search-body-section .sub-section .middle-name-column{
     left:50.5%;
 }
 
-.search-section .search-body-section .user-id-column{
+.search-section .search-body-section .sub-section .user-id-column{
     left:75.5%;
 }
 
 
-.search-section .search-body-section .last-name-column,
-.search-section .search-body-section .first-name-column,
-.search-section .search-body-section .middle-name-column,
-.search-section .search-body-section .user-id-column{
+.search-section .search-body-section .sub-section .last-name-column,
+.search-section .search-body-section .sub-section .first-name-column,
+.search-section .search-body-section .sub-section .middle-name-column,
+.search-section .search-body-section .sub-section .user-id-column{
     position: absolute;
     top:0;
     width:24.5%;
     height:100%;
     display: inline-block;
+    overflow: visible;
 }
 
-.search-section .search-body-section .last-name-column #title-col,
-.search-section .search-body-section .first-name-column #title-col,
-.search-section .search-body-section .middle-name-column #title-col,
-.search-section .search-body-section .user-id-column #title-col{
+.search-section .search-body-section .sub-section .last-name-column #title-col,
+.search-section .search-body-section .sub-section .first-name-column #title-col,
+.search-section .search-body-section .sub-section .middle-name-column #title-col,
+.search-section .search-body-section .sub-section .user-id-column #title-col{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: 1.5vw;
     text-align: center;
     width:100%;
     background-color:#ddb228;
+}
+
+.search-section .search-body-section .sub-section .last-name-column .last-name-rows,
+.search-section .search-body-section .sub-section .first-name-column .first-name-rows,
+.search-section .search-body-section .sub-section .middle-name-column .middle-name-rows,
+.search-section .search-body-section .sub-section .user-id-column .user-id-rows{
+    display: block;
+    width:100%;
+    height:6%;
+    text-align: center;
+    font-size: 1.5vw;
 }

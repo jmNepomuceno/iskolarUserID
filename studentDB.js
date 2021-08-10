@@ -1709,3 +1709,5 @@ const student_lists = [
     {last_name: "ZUÃIGA",  first_name: "CHARIST",  sub_name1: "BIUGOS",  id: 3906}, 
     {last_name: "ZUÃIGA",  first_name: "JERIC",  sub_name1: "SISMUNDO",  id: 3532}, 
 ]
+
+module.exports = {student_lists}
