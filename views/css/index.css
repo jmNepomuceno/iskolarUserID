@@ -70,16 +70,6 @@ header{
     font-size: 1.3vw;
 }
 
-.sub-header{
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height:80px;
-    transition: 1s; 
-    border:1px solid black;
-}
-
 .sort-div{
     position: absolute;
     top:72%;
