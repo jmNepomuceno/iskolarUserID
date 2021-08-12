@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -173,4 +172,59 @@
     height:6%;
     text-align: center;
     font-size: 1.5vw;
+}
+
+footer{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:20%;
+    background-color:black;
+}
+
+footer .fb-link{
+    position: absolute;
+    top:20%;
+    left:5%;
+    width:23%;
+    height:20%;
+}
+
+footer .fb-link #fb-logo{
+    width:10%;
+    height:100%;
+}
+
+footer .fb-link #fb-word{
+    color:white;
+    font-style: italic;
+}
+
+footer .website-link{
+    position: absolute;
+    top:60%;
+    left:5%;
+    width:35%;
+    height:20%;
+}
+
+footer .website-link #website-logo{
+    width:7%;
+    height:100%;
+}
+
+footer .website-link #website-word{
+    color:white;
+    font-style: italic;
+}
+
+footer .quote{
+    position: absolute;
+    top:20%;
+    right:5%;
+    width:35%;
+    height:70%;
+    color:white;
+    text-align: center;
 }
