@@ -113,5 +113,20 @@ app.get('/search' , (req, res) =>{
     })
 })
 
+app.get('/sort' , (req , res)=>{
+    let temp_student_lists = student_lists
+  
+    res.render('sort', {
+        search_data: req.query,
+        search_information : {
+            last_name : req.query.last_name,
+            first_name : req.query.first_name,
+            middle_name : req.query.middle_name,
+            user_id : req.query.user_id
+        },
+        student_lists : temp_student_lists
+    })
+})
+
 let port = process.env.PORT || 3000
 app.listen(port, ()=> console.log(`Listening to port ${port}`))
