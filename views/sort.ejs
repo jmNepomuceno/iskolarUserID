@@ -22,6 +22,11 @@
             <form class="sort-form" autocomplete="off">
 
                 <select name="column_header" id="sort-column">
+                    <option selected>
+                        <% if(sort_information.column_header){ %>
+                            <%= sort_information.column_header %>
+                        <% } %>
+                    </option>
                     <option value="Last_Name">Last Name</option>
                     <option value="First_Name">First Name</option>
                     <option value="Middle_Name">Middle Name</option>
@@ -29,6 +34,11 @@
                 </select>
 
                 <select name="category" id="sort-category">
+                    <option selected>
+                        <% if(sort_information.category){ %>
+                            <%= sort_information.category %>
+                        <% } %>
+                    </option>
                     <option value="a_z">A-Z</option>
                     <option value="z_a">Z-A</option>
                     <option value="1_n">1-N</option>
@@ -48,13 +58,7 @@
                     <!-- De , Dela , Delos, San -->
                     <% for(let i = 0; i < student_lists.length; i++){ %>
                         <label class="last-name-rows"> 
-                            <% var two_surnames = ["DE", "DEL" , "DELA" , "DELOS", "SAN"]; %>
-                            <% let prev_key, prev_prev_key %>
-                            <% if(two_surnames.includes(student_lists[i].last_name)) {%>
-                                <%= student_lists[i].last_name %> <%= student_lists[i].first_name%>
-                            <%}else{ %>
-                                <%= student_lists[i].last_name %>
-                            <% } %>
+                            <%= student_lists[i].last_name %>
                         </label>
                     <% } %>
 
@@ -65,52 +69,7 @@
 
                     <% for(let i = 0; i < student_lists.length; i++){ %>
                         <label class="first-name-rows">
-                            <% var two_middlenames = ["DE", "DEL" , "DELA" , "DELOS", "SAN"]; %>
-                            <% var two_surnames = ["DE", "DEL" , "DELA" , "DELOS", "SAN"]; %>
-                            <% var start %>
-                            <% if(two_surnames.includes(student_lists[i].last_name)) {%>
-                                <% start = 2 %>
-                            <%}else{ %>
-                                <% start = 1 %>
-                            <% } %>
-
-                            <% for (let [key, value] of Object.entries(student_lists[i])) {%>
-                                <% if(key == 'id'){%>
-                                    <% break%>
-                                <% }%>
-                                <% prev_key = key%>
-                            <% }%>
-
-                            <% for (let [key, value] of Object.entries(student_lists[i])) {%>
-                                <% if(key == prev_key){%>
-                                    <% break%>
-                                <% }%>
-                                <% prev_prev_key = key%>
-                            <% }%>
-
-                            <% if(!two_middlenames.includes(student_lists[i][prev_prev_key])){ %>
-                                <% prev_prev_key = '' %>
-                            <%} %>
-
-                            <% let j = 0 %>
-                            <% let start_key, end_key %>
-                            <% for (let [key, value] of Object.entries(student_lists[i])) {%>
-                                <% if(j == start){ %>
-                                    <% start_key = key %>
-                                <%}%>
-                                
-                                <% if(key == prev_prev_key || key == prev_key){ %>
-                                    
-                                    <% break %>
-                                <% } %>
-                                <% end_key = key %>
-                                <% j++ %>
-                            <% }%>
-                            <%if(start_key == end_key){%>
-                                <%= student_lists[i][start_key]%> 
-                            <%}else{%>
-                                <%= student_lists[i][start_key] %> <%= student_lists[i][end_key] %> 
-                            <%}%>
+                            <%= student_lists[i].first_name %>
                         </label>
                     <% } %>
 
@@ -121,27 +80,7 @@
 
                     <% for(let i = 0; i < student_lists.length; i++){ %>
                         <label class="middle-name-rows">
-                            
-                            
-                            <% for (let [key, value] of Object.entries(student_lists[i])) {%>
-                                <% if(key == 'id'){%>
-                                    <% break%>
-                                <% }%>
-                                <% prev_key = key%>
-                            <% }%>
-
-                            <% for (let [key, value] of Object.entries(student_lists[i])) {%>
-                                <% if(key == prev_key){%>
-                                    <% break%>
-                                <% }%>
-                                <% prev_prev_key = key%>
-                            <% }%>
-                            
-                            <% if(two_middlenames.includes(student_lists[i][prev_prev_key])){ %>
-                                <%= student_lists[i][prev_prev_key] %> <%= student_lists[i][prev_key] %>
-                            <%}else{ %>
-                                <%= student_lists[i][prev_key] %>
-                            <%} %>
+                            <%= student_lists[i].middle_name %>
                         </label>
                     <% } %>
 
