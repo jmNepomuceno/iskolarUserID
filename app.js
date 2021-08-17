@@ -149,5 +149,18 @@ app.get('/sort' , (req , res)=>{
     })
 })
 
+app.get('/filter' , (req , res)=>{
+    let temp_student_lists = fixedStudentLists()
+
+    res.render('filter', {
+        sort_information : {
+            column_header : req.query.column_header,
+            category : req.query.category
+        },
+        student_lists : temp_student_lists
+    })
+})
+
+
 let port = process.env.PORT || 3000
 app.listen(port, ()=> console.log(`Listening to port ${port}`))

@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sub-header{
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:80px;
+    background-color: #0838e2;
+}
+
+.sub-header label{
+    position: absolute;
+    top:0;
+    left:25%;
+    color:#e9d9f2;
+    font-size: 3.5vw;
+    width:50%;
+    height:100%;
+    text-align: center;
+}
+
+.sub-header #iskolar-logo,
+.sub-header #bataan-logo{
+    position: absolute;
+    width:8%;
+    height:80%;
+}
+
+.sub-header #iskolar-logo{
+    top:7%;
+    left:25%;
+}
+
+.sub-header #bataan-logo{
+    top:7%;
+    left:67%;
+}
+
+.filter-section{
+    position: absolute;
+    top:10%;
+    left:0%;
+    width:100%;
+    height:100%;
+    transition: 1s;
+}
+
+.filter-section .filter-side-section{
+    position: absolute;
+    top:15%;
+    left:3%;
+    width:20%;
+    height:60%;
+    border: 2px solid #b5c5fc;
+    border-radius: 5%;
+}
+
+.filter-section .filter-side-section .filter-form #first-name-input{
+    top:10%;
+}
+
+.filter-section .filter-side-section .filter-form #middle-name-input{
+    top:25%;
+}
+
+.filter-section .filter-side-section .filter-form #last-name-input{
+    top:40%;
+}
+
+.filter-section .filter-side-section .filter-form #from-user-id-input{
+    top:55%;
+}
+
+.filter-section .filter-side-section .filter-form #to-user-id-input{
+    top:70%;
+}
+
+.filter-section .filter-side-section .filter-form #first-name-input,
+.filter-section .filter-side-section .filter-form #last-name-input,
+.filter-section .filter-side-section .filter-form #middle-name-input,
+.filter-section .filter-side-section .filter-form #from-user-id-input,
+.filter-section .filter-side-section .filter-form #to-user-id-input{
+    position: absolute;
+    left:9%;
+    width:80%;
+    height:10%;
+    outline:none;
+    text-align: center;
+    background: #ced9fd;
+    border:1px solid #3b67f7;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-size: 1vw;
+}
+
+.filter-section .filter-side-section .filter-form #filter-btn{
+    position: absolute;
+    bottom:5%;
+    left:9%;
+    width:80%;
+    height:10%;
+    font-size: 1vw;
+}
+
+.filter-section .filter-body-section{
+    position: absolute;
+    top:5%;
+    right:3%;
+    width:70%;
+    height:80%;
+    border: 2px solid #b5c5fc;
+    overflow: auto;
+}
+
+.filter-section .filter-body-section .sub-section{
+    margin-top:5%;
+    width:100%;
+    height:auto;
+}
+
+.filter-section .filter-body-section .sub-section .last-name-column{
+    left:0;
+}
+
+.filter-section .filter-body-section .sub-section .first-name-column{
+    left:25.35%;
+}
+
+.filter-section .filter-body-section .sub-section .middle-name-column{
+    left:50.5%;
+}
+
+.filter-section .filter-body-section .sub-section .user-id-column{
+    left:75.5%;
+}
+
+
+.filter-section .filter-body-section .sub-section .last-name-column,
+.filter-section .filter-body-section .sub-section .first-name-column,
+.filter-section .filter-body-section .sub-section .middle-name-column,
+.filter-section .filter-body-section .sub-section .user-id-column{
+    position: absolute;
+    top:0;
+    width:24.5%;
+    height:100%;
+    display: inline-block;
+    overflow: visible;
+}
+
+.filter-section .filter-body-section .sub-section .last-name-column #title-col,
+.filter-section .filter-body-section .sub-section .first-name-column #title-col,
+.filter-section .filter-body-section .sub-section .middle-name-column #title-col,
+.filter-section .filter-body-section .sub-section .user-id-column #title-col{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+    width:100%;
+    background-color:#ddb228;
+}
+
+.filter-section .filter-body-section .sub-section .last-name-column .last-name-rows,
+.filter-section .filter-body-section .sub-section .first-name-column .first-name-rows,
+.filter-section .filter-body-section .sub-section .middle-name-column .middle-name-rows,
+.filter-section .filter-body-section .sub-section .user-id-column .user-id-rows{
+    display: block;
+    width:100%;
+    height:6%;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+footer{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:20%;
+    background-color:black;
+}
+
+footer .fb-link{
+    position: absolute;
+    top:20%;
+    left:5%;
+    width:23%;
+    height:20%;
+}
+
+footer .fb-link #fb-logo{
+    width:10%;
+    height:100%;
+}
+
+footer .fb-link #fb-word{
+    color:white;
+    font-style: italic;
+}
+
+footer .website-link{
+    position: absolute;
+    top:60%;
+    left:5%;
+    width:35%;
+    height:20%;
+}
+
+footer .website-link #website-logo{
+    width:7%;
+    height:100%;
+}
+
+footer .website-link #website-word{
+    color:white;
+    font-style: italic;
+}
+
+footer .quote{
+    position: absolute;
+    top:20%;
+    right:5%;
+    width:35%;
+    height:70%;
+    color:white;
+    text-align: center;
+}
+
+#lol{
+    position: absolute;
+    top:45%;
+    left:40%;
+    color:red;
+    
+    font-size: 5vw;
+    z-index: 1;
+}
